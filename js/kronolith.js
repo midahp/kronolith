@@ -6286,7 +6286,7 @@ KronolithCore = {
             let emailFilter = function (attendee) {return !!attendee.e}
             let emails = [];
             ev.at.findAll(emailFilter).each(function(foundUser) {
-                if (foundUser.l) {
+                if (foundUser.l && foundUser.l !== foundUser.e) {
                     emails.push('"' + foundUser.l +'"' + ' <' + foundUser.e + '>');
                 } else {
                     emails.push(foundUser.e);
