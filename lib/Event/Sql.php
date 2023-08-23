@@ -283,6 +283,7 @@ class Kronolith_Event_Sql extends Kronolith_Event
             $properties['event_baseid'] = '';
             $properties['event_exceptionoriginaldate'] = null;
         }
+        
         $properties['other_attributes'] = json_encode($this->otherAttributes);
 
         return $properties;
